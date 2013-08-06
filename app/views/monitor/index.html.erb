@@ -1,0 +1,51 @@
+<% javascript_path 'highchart.js' %>
+
+<%= content_tag "div", id: "chart", data: {url: (Playlist.tweet_count_per_day(params["year"].to_i, params["month"].to_i)).to_json } do %>
+    Loading chart...
+<% end %>
+
+<script type='text/javascript'>
+
+    data = $('#chart').data('url');
+
+    var chart = new Highcharts.Chart({
+
+        chart: {
+            renderTo: 'container',
+            type: 'column',
+            backgroundColor: 'transparent',
+            animation: {duration: 500}
+        },
+        credits: { enabled:false },
+        title: {text:null},
+
+        xAxis: {
+            categories: data['xs'],
+            lineWidth: 0,
+            tickLength: 0,
+            labels: {y: 20}
+        },
+
+        plotOptions: {
+            column: {
+                pointPadding: 0.1,
+                borderWidth: 0
+            }
+        },
+
+        yAxis: {
+            title: '',
+            min: 0,
+            showFirstLabel: false,
+            gridLineWidth: 0
+        },
+
+        series: [{
+            showInLegend: false,
+            name: 'Tweet count',
+            data: data['ys']
+        }]
+
+
+    });
+</script>

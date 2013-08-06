@@ -1,0 +1,49 @@
+// This is a manifest file that'll be compiled into application.js, which will include all the files
+// listed below.
+//
+// Any JavaScript/Coffee file within this directory, lib/assets/javascripts, vendor/assets/javascripts,
+// or vendor/assets/javascripts of plugins, if any, can be referenced here using a relative path.
+//
+// It's not advisable to add code directly here, but if you do, it'll appear at the bottom of the
+// the compiled file.
+//
+// WARNING: THE FIRST BLANK LINE MARKS THE END OF WHAT'S TO BE PROCESSED, ANY BLANK LINE SHOULD
+// GO AFTER THE REQUIRES BELOW.
+//
+
+
+//= require jquery
+//= require jquery_ujs
+//= require_tree .
+
+function scroll_to_tweet(id) {
+	//console.log(id);
+	if (id > 0) {
+		id_s = "#tt" + id;
+		$('html, body').animate({
+    	   scrollTop: $(id_s).offset().top - 120
+    	}, 'slow');
+	}
+}
+
+$(document).ready(function (){
+
+	var current_scroll_id = 0;
+
+    $("a").click(function() {
+        var the_id = $(this).attr("href");
+        scroll_to_tweet(the_id);
+        return false;
+    });
+
+	$(window).keyup(function (event) {
+  		// handle cursor keys
+		event.preventDefault();	  		
+		if (event.keyCode == 40) {
+    		scroll_to_tweet(++current_scroll_id);
+  		} else if (event.keyCode == 38) {
+    		scroll_to_tweet(--current_scroll_id);
+  		}
+	});
+});
+

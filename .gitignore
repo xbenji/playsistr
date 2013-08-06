@@ -14,3 +14,7 @@ capybara-*.html
 **.orig
 rerun.txt
 pickle-email-*.html
+lib/assets/last_rt_id.txt
+lib/spotify_appkey.key
+.idea/
+config/newrelic.yml

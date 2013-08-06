@@ -1,0 +1,41 @@
+
+<div id="header">
+    <h1>Playsistr</h1>
+</div>
+
+<div style="width: 100%; height: 130px; margin: 20px auto;">
+  <ul class="nav_tags">
+    <% @tags.each do |tag| %>
+        <li><%= tag_url tag %></li>
+    <% end%>
+  </ul>
+</div>
+
+<div style="width: 190px; margin: 20px auto; height: 26px;">
+    <div id="nav"><%= previous_page_url " << " %>  <%= next_page_url ">>" %></div>
+</div>
+
+<div id="home">
+  <% @playlists.each_with_index do |pl, index| %>
+
+      <div id="item_<%= index %>" class="blob">
+
+        <p class="pl_title"><%= truncate pl.title, :length => 36 %></p>
+        <div class="pl_iframe">
+            <iframe src="https://embed.spotify.com/?uri=<%= pl.uri %>&theme=black" width="250" height="80" frameborder="0"  allowtransparency="true"></iframe>
+        </div>
+        <div class="tags">
+        <ul class="tags">
+          <% pl.tags[0..6].each do |t|%>
+           <li><a ><%= t.name %></a></li>
+          <% end%>
+        </ul>
+        </div>
+
+        <div class="pl_footer">
+          <b><%= pl.user %></b> - <%= time_ago_in_words pl.tweet_date %> ago
+        </div>
+      </div>
+  <% end %>
+
+</div>

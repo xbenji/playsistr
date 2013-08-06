@@ -1,0 +1,48 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the top of the
+ * compiled file, but it's generally better to create a new file per style scope.
+ *
+ *= require_self
+ *= require_tree .
+ */
+
+body {
+    background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAACCAYAAABytg0kAAAAGElEQVQIW2M0MjL6z8rKysBobm7+nwEIACGxA0tWYNriAAAAAElFTkSuQmCC);
+    //background: url(<%= asset_path 'bg-black.jpg' %>);
+    //background: url(<%= asset_path 'bg2.png' %>);
+    font-family: Ubuntu, sans-serif;
+    background-attachment: fixed;
+    color: gray;
+}
+
+h1 {
+    font-size: 5em;
+    margin-bottom: 10px;
+    color: #262626;
+    text-shadow: 0px 1px rgba(255, 255, 255, .1), 0px -1px rgba(0, 0, 0, .8);
+    /*
+    -webkit-mask-image: url(<%= asset_path 'bg-mask.png' %>);
+    mask-image: url(<%= asset_path 'bg-mask.png' %>);
+    -o-mask-image: url(<%= asset_path 'bg-mask.png' %>);
+    -moz-mask-image: url(<%= asset_path 'bg-mask.png' %>);
+    -ms-mask-image: url(<%= asset_path 'bg-mask.png' %>);
+    */
+}
+
+.intro {
+    font-size: 0.8em;
+    color:  #888;
+    text-shadow: 0 1px #111;
+}
+
+
+#container {
+    width: 860px; margin: 15px auto;
+    position: relative;
+}

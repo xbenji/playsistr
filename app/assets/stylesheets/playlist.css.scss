@@ -1,0 +1,133 @@
+// Place all the styles related to the Playlist controller here.
+// They will automatically be included in application.css.scss.erb.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+h1 {
+  font-size: 3em;
+  margin: 16px 16px -8px 16px;
+  color: #262626;
+  text-shadow: 0px 1px rgba(255, 255, 255, .1), 0px -1px rgba(0, 0, 0, .8);
+}
+
+#nav {
+  //float: left;
+  height: 30px;
+  margin: auto;
+}
+
+#nav a {
+  color: #262626;
+  font-size: 2em;
+  margin: 20px;
+  text-shadow: 0px 1px rgba(255, 255, 255, .1), 0px -1px rgba(0, 0, 0, .8);
+  text-decoration: none;
+  font-weight: bold;
+}
+
+#nav a:hover {
+  color: #357bb8;
+}
+
+.nav_tags ul {
+  font-size: 0.8em;
+  line-height: 0.8em;
+  list-style-type: none;
+  height: 42px;
+  margin-left: 0px;
+  margin-top: -5px;
+  padding-left: 0;
+  overflow: hidden;
+}
+
+.nav_tags li {
+  display: inline;
+  list-style: none;
+  padding: 0px;
+}
+
+.nav_tags a{
+  display: block;
+  float: left;
+  padding: 4px;
+  margin: 3px 3px 0 0;
+  text-decoration:none;
+
+  color: #888;
+  text-shadow: 0px 1px rgba(255, 255, 255, .1), 0px -1px rgba(0, 0, 0, .8);
+}
+
+a.tag_on {
+  color: #357bb8;
+}
+
+.tags li:hover{background:#555;}
+.tags a:hover{background:#555;}
+
+.tags ul {
+  font-size: 0.8em;
+  line-height: 0.8em;
+  list-style-type: none;
+  height: 42px;
+  margin-left: 10px;
+  margin-top: -5px;
+  padding-left: 0;
+  overflow: hidden;
+}
+
+.tags li {
+  display: inline;
+  list-style: none;
+  padding: 0px;
+}
+
+.tags a{
+  display: block;
+  float: left;
+  padding: 4px;
+  margin: 3px 3px 0 0;
+  background:#bbb;
+  color:#fff;
+  text-decoration:none;
+  -moz-border-radius:1px;
+  -webkit-border-radius:1px;
+}
+
+.blob {
+  float: left;
+  width: 268px;
+  height: 204px;
+  background: #eee;
+  margin: 10px;
+
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  -ms-border-radius: 2px;
+  -o-border-radius: 2px;
+  border-radius: 2px;
+  box-shadow: 0 2px 3px rgba(0, 0, 0, 0.8);
+  -webkit-box-shadow: 0 2px 3px rgba(0, 0, 0, 0.8);
+
+}
+
+.pl_iframe {
+  margin: 8px;
+}
+
+.pl_title {
+  color: #000;
+  font-size: 0.9em;
+  margin: 8px;
+}
+
+.pl_footer {
+  font-size: 0.7em;
+  text-align: right;
+  padding: 3px;
+  height: 20px;
+  background: #ddd;
+}
+
+#home {
+    width: 1000px; margin: 15px auto;
+    position: relative;
+}

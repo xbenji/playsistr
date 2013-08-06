@@ -1,0 +1,28 @@
+
+<script src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+<div id="navbar">
+  <h1>Playsistr</h1>
+  <p class='intro'>
+    Playsistr go get the all the latest playlists on Spotify. <br> Follow me on twitter <a href="#">@playsista</a></p>
+  </p>
+  <% @playlists.each_with_index do |pl, index| %>
+      <ul>
+        <li>
+          <a href="#tt<%= index %>"> <%= pl.uri %></a>
+        </li>
+      </ul>
+  <% end %>
+</div>
+
+<div id="content">
+
+  <% @playlists.each_with_index do |pl, index| %>
+      <div id="tt<%= index %>" class="tweetget">
+        <%= pl.tweet_html.html_safe %>
+        <iframe src="https://embed.spotify.com/?uri=<%= pl.uri %>&theme=black" width="420" height="380" frameborder="0"  allowtransparency="true"></iframe>
+      </div>
+  <% end %>
+
+</div>
+</div>
